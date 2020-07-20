@@ -3,16 +3,34 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Home</ion-title>
+    <ion-title>ระบบลงทะเบียนอบรมมหาวิทยาลัยราชภัฏสงขลา</ion-title>
+   
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <h3>Ionic Menu Starter</h3>
+  
+  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
 
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
+  <ion-card color="light">
+    <ion-card-header>
+      รายละเอียดการอบรม
+    </ion-card-header>
+    <ion-card-content>
 
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+    </ion-card-content>
+  </ion-card>
+
+    <ion-item (click)="train()">
+      <ion-thumbnail item-left ></ion-thumbnail>
+      <h2>อบรมอังกฤษ</h2>
+    </ion-item>
+
+    <!-- <ion-item (click)="train()">
+      <ion-thumbnail item-left ></ion-thumbnail>
+      <h2>อบรมคอมพิวเตอร์</h2>
+    </ion-item> -->
+
+ 
+  
 </ion-content>
