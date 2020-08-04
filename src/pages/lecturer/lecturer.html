@@ -8,21 +8,24 @@
 
   <ion-navbar>
     <ion-title>ข้อมูลวิทยากร</ion-title>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+      
+    </button>
   </ion-navbar>
-
 </ion-header>
 
 
 <ion-content padding>
   <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
 
-<p>หมายเลขประจำตัวประชาชน :</p>
+<!-- <p>หมายเลขประจำตัวประชาชน :</p>
 <p>ชื่อ-นามสกุล :</p>
 <p>สถานที่ทำงาน :</p>
 <p>ตำแหน่ง :</p>
 <p>หมายเลขโทรศัพท์ :</p>
 <p>อีเมล :</p>
 
-<button ion-button secondary >ล้างข้อมูล</button>
+<button ion-button secondary >ล้างข้อมูล</button> -->
 
 </ion-content>
