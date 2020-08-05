@@ -1,12 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs/Observable';
 
-/**
- * Generated class for the RegisParticipantsPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+
 
 @IonicPage()
 @Component({
@@ -15,11 +12,44 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class RegisParticipantsPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+
+  postdata: any = {};
+
+  constructor(public navCtrl: NavController, public navParams: NavParams,
+              public http: HttpClient) {
   }
+
+  Register1(){
+    let url = 'http://127.0.0.1/App/participants/insert_regis.php';
+
+    let postdataset = new FormData();
+    postdataset.append('ID', this.postdata.P_ID);
+    postdataset.append('DirName', this.postdata.DirName);
+    postdataset.append('Name', this.postdata.Name);
+    postdataset.append('Tell', this.postdata.Tell);
+    postdataset.append('Username', this.postdata.Username);
+    postdataset.append('Password', this.postdata.Password);
+
+    let callback:Observable<any> = this.http.post(url,postdataset);
+    callback.subscribe(call =>{
+      if(call.status == 200){
+        // this.navCtrl.pop();
+        alert(call.msg);
+        
+    }else{
+      alert(call.msg);
+    } 
+   });
+}
+
+
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad RegisParticipantsPage');
   }
+
+  // gologin(){
+  //   this.navCtrl.push("LoginPage")
+  // }
 
 }

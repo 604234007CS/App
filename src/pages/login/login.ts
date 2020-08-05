@@ -83,4 +83,9 @@ export class LoginPage {
   RegisLecturer(){
     this.navCtrl.push("RegisLecturerPage");
   }
+
+  RegisParticipants(){
+    this.navCtrl.push("RegisParticipantsPage");
+  }
+ 
 }

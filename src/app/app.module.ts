@@ -1,5 +1,4 @@
 import { LecturerPage } from './../pages/lecturer/lecturer';
-import { Login1Page } from './../pages/login1/login1';
 import { LoginPage } from './../pages/login/login';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
@@ -13,16 +12,15 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { RegisParticipantsPage } from '../pages/regis-participants/regis-participants';
+import { ApiKeyProvider } from '../providers/api-key/api-key';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     LoginPage,
-    Login1Page,
     LecturerPage,
-    RegisParticipantsPage,
+    
     
     
   ],
@@ -38,16 +36,14 @@ import { RegisParticipantsPage } from '../pages/regis-participants/regis-partici
     MyApp,
     HomePage,
     LoginPage,
-    Login1Page,
     LecturerPage,
-    RegisParticipantsPage,
-
     
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    ApiKeyProvider
   ]
 })
 export class AppModule {}

@@ -5,7 +5,7 @@
       <ion-icon name="menu"></ion-icon>
 
     </button>
-    <ion-title>เข้าสู่ระบบวิทยากร</ion-title>
+    <ion-title>เข้าสู่ระบบ</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -24,8 +24,10 @@
     </ion-item>
   </ion-list>
 
-  <button ion-button secondary (click)="Login()" >เข้าสู่ะบบ</button>
-  <button ion-button secondary (click) ="RegisLecturer()">ลงทะเบียน</button>
+  <button ion-button round full color ="secondary" (click)="Login()" >เข้าสู่ะบบ</button>
+  <button ion-button round full  (click) ="RegisLecturer()">ลงทะเบียนวิทยากร</button>
+  <button ion-button round full  (click) ="RegisParticipants()">ทะเบียนผู้เข้าอบรม</button>
+
 
 
 </ion-content>

@@ -1,4 +1,3 @@
-import { Login1Page } from './../pages/login1/login1';
 import { LoginPage } from './../pages/login/login';
 import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
@@ -6,7 +5,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
-import { RegisParticipantsPage } from '../pages/regis-participants/regis-participants';
+// import { RegisParticipantsPage } from '../pages/regis-participants/regis-participants';
 
 @Component({
   templateUrl: 'app.html'
@@ -24,9 +23,8 @@ export class MyApp {
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'หน้าเเรก', component: HomePage },
-      { title: 'สำหรับผู้เข้าอบรม', component: Login1Page },
-      { title: 'สำหรับวิทยากร', component: LoginPage }, 
-      { title: 'ผู้เข้าอบรม', component: RegisParticipantsPage },
+      { title: 'เข้าสู่ระบบ', component: LoginPage }, 
+      // { title: 'ผู้เข้าอบรม', component: RegisParticipantsPage },
 
     ];
 

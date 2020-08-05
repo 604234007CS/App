@@ -21,46 +21,41 @@
   <ion-list inset>
     <ion-item>
       <ion-label><p>รหัสวิทยากร :</p></ion-label>
-      <ion-input type="text"></ion-input>
+      <ion-input type="text" value="" [(ngModel)] = "postdata.L_ID" ></ion-input>
     </ion-item>
   
     <ion-item>
       <ion-label><p>คำนำหน้า :</p></ion-label>
-      <ion-input type="text"></ion-input>
+      <ion-input type="text" value="" [(ngModel)] = "postdata.DirName" ></ion-input>
     </ion-item>
 
     <ion-item>
-      <ion-label><p>ชื่อ :</p></ion-label>
-      <ion-input type="text"></ion-input>
-    </ion-item>
-  
-    <ion-item>
-      <ion-label><p>นามสกุล :</p></ion-label>
-      <ion-input type="text"></ion-input>
-    </ion-item>
-  
-    <ion-item>
-      <ion-label><p>ตำแหน่ง :</p></ion-label>
-      <ion-input type="text"></ion-input>
+      <ion-label><p>ชื่อ-นามสกุล :</p></ion-label>
+      <ion-input type="text" value="" [(ngModel)] = "postdata.Name"></ion-input>
     </ion-item>
   
     <ion-item>
       <ion-label><p>หมายเลขโทรศัพท์ :</p></ion-label>
-      <ion-input type="text"></ion-input>
+      <ion-input type="text"  value="" [(ngModel)] = "postdata.Tell"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label><p>สถานที่ทำงาน :</p></ion-label>
+      <ion-input type="text"  value="" [(ngModel)] = "postdata.Workplace"></ion-input>
     </ion-item>
   
     <ion-item>
       <ion-label><p>Username :</p></ion-label>
-      <ion-input type="text"></ion-input>
+      <ion-input type="text"  value="" [(ngModel)] = "postdata.Username" ></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label><p>Password :</p></ion-label>
-      <ion-input type="password"></ion-input>
+      <ion-input type="password"  value="" [(ngModel)] = "postdata.Password"></ion-input>
     </ion-item>
     
   </ion-list>
-  <button ion-button secondary >ลงทะเบียน</button>
+  <button ion-button secondary (click)= "Register()" >ลงทะเบียน</button>
 </ion-content>
 
 
