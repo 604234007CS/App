@@ -24,7 +24,7 @@ export class RegisLecturerPage {
       let url = 'http://127.0.0.1/App/lecturer/insert_regis.php';
 
       let postdataset = new FormData();
-      postdataset.append('ID', this.postdata.L_ID);
+  
       postdataset.append('DirName', this.postdata.DirName);
       postdataset.append('Name', this.postdata.Name);
       postdataset.append('Tell', this.postdata.Tell);
@@ -36,6 +36,7 @@ export class RegisLecturerPage {
       callback.subscribe(call =>{
         if(call.status == 200){
           alert(call.msg);
+          this.navCtrl.pop();
       }else{
         alert(call.msg);
       } 

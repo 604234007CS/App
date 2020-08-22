@@ -1,5 +1,4 @@
 import { LecturerPage } from './../pages/lecturer/lecturer';
-import { LoginPage } from './../pages/login/login';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
@@ -13,13 +12,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { ApiKeyProvider } from '../providers/api-key/api-key';
+import { ParticipantsPage } from '../pages/participants/participants';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    LoginPage,
     LecturerPage,
+    ParticipantsPage,
     
     
     
@@ -35,9 +35,8 @@ import { ApiKeyProvider } from '../providers/api-key/api-key';
   entryComponents: [
     MyApp,
     HomePage,
-    LoginPage,
     LecturerPage,
-    
+    ParticipantsPage,
   ],
   providers: [
     StatusBar,

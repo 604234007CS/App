@@ -1,4 +1,4 @@
-import { LoginPage } from './../pages/login/login';
+import { LecturerPage } from './../pages/lecturer/lecturer';
 import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
@@ -23,7 +23,8 @@ export class MyApp {
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'หน้าเเรก', component: HomePage },
-      { title: 'เข้าสู่ระบบ', component: LoginPage }, 
+      { title: 'วิทยากร', component: LecturerPage }, 
+
       // { title: 'ผู้เข้าอบรม', component: RegisParticipantsPage },
 
     ];

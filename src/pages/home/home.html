@@ -10,20 +10,30 @@
 
 <ion-content padding>
   
-  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
-
-  <ion-card color="light">
-    <ion-card-header>
-      ระบบลงทะเบียนอบรมมหาวิทยาลัยราชภัฏสงขลา
-    </ion-card-header>
 
     
     <ion-card-content>
+      <ion-list inset>
+        <ion-item>
+          <ion-label floating><p>Username :</p></ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-item>
+      
+        <ion-item>
+          <ion-label floating><p>Password :</p></ion-label>
+          <ion-input type="password" ></ion-input>
+        </ion-item>
+      </ion-list>
+    
+      <button ion-button round full color ="secondary" (click)="Login()" >เข้าสู่ะบบ</button>
+      <button ion-button round full  (click) ="RegisLecturer()">ลงทะเบียนวิทยากร</button>
+      <button ion-button round full  (click) ="RegisParticipants()">ทะเบียนผู้เข้าอบรม</button>
+    
+    
 
     </ion-card-content>
-  </ion-card>
-
-   
  
+
+  
   
 </ion-content>

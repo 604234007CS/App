@@ -23,7 +23,6 @@ export class RegisParticipantsPage {
     let url = 'http://127.0.0.1/App/participants/insert_regis.php';
 
     let postdataset = new FormData();
-    postdataset.append('ID', this.postdata.P_ID);
     postdataset.append('DirName', this.postdata.DirName);
     postdataset.append('Name', this.postdata.Name);
     postdataset.append('Tell', this.postdata.Tell);
@@ -33,9 +32,8 @@ export class RegisParticipantsPage {
     let callback:Observable<any> = this.http.post(url,postdataset);
     callback.subscribe(call =>{
       if(call.status == 200){
-        // this.navCtrl.pop();
         alert(call.msg);
-        
+        this.navCtrl.pop();
     }else{
       alert(call.msg);
     } 

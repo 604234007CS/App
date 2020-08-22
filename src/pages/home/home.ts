@@ -13,4 +13,12 @@ export class HomePage {
   train(){
     this.navCtrl.push("TrainPage");
   }
+
+  RegisLecturer(){
+    this.navCtrl.push("RegisLecturerPage");
+  }
+
+  RegisParticipants(){
+    this.navCtrl.push("RegisParticipantsPage");
+  }
 }
