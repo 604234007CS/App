@@ -1,3 +1,5 @@
+import {TrainDetialPage} from '../train-detial/train-detial';
+import { LoaddataProvider } from './../../providers/loaddata/loaddata';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
@@ -14,19 +16,31 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'train.html',
 })
 export class TrainPage {
+  data: Object;
+ 
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  
+  constructor(public navCtrl: NavController, public navParams: NavParams,  public porm: LoaddataProvider) {
+  this.loaddata();
   }
+
+  
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad TrainPage');
+    
   }
 
-  goRegister(){
-    this.navCtrl.push("RegisterPage");
+ 
+  loaddata(){
+    this.porm.getTrain().subscribe(porms=>{
+      this.data=porms;
+      console.log(porms);
+    });
   }
+ 
 
-  goName(){
-    this.navCtrl.push("NamePage");
+  getdetail(item){
+    this.navCtrl.push(TrainDetialPage,item);
   }
 }

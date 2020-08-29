@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 /**
- * Generated class for the ParticipantsPage page.
+ * Generated class for the EvaluationPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -10,22 +10,16 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-participants',
-  templateUrl: 'participants.html',
+  selector: 'page-evaluation',
+  templateUrl: 'evaluation.html',
 })
-export class ParticipantsPage {
-  logindata :any =[];
-  trianlecturer: any;
-  train: any;
-
+export class EvaluationPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad ParticipantsPage');
-    this.logindata = this.navParams.data;
-    console.log(this.logindata);
+    console.log('ionViewDidLoad EvaluationPage');
   }
 
 }

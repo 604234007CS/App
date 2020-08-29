@@ -7,12 +7,34 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>participants</ion-title>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    
+    <ion-title>ข้อมูลผู้เข้าอบรม</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+
+  <button ion-button icon-end>
+    Right Icon
+    <ion-icon name="home"></ion-icon>
+  </button>
+
+  <!-- <ion-buttons end color="secondary" >
+    <button ion-button icon-only>
+    <ion-icon let right >edit</ion-icon>
+  </button>
+  </ion-buttons> -->
+
+  <ion-item *ngFor="let item of logindata"> 
+    <p><b>คำนำหน้า : </b>{{item.Dir_Name}}</p>
+    <p><b>ชื่อ : </b>{{item.P_Name}}</p>
+    <p><b>เบอร์โทรศัพท์ : </b>{{item.Tell}}</p>
+
+</ion-item>
 
 </ion-content>

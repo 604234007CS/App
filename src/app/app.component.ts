@@ -1,6 +1,9 @@
+import { TrainPage } from './../pages/train/train';
+// import { LogoutPage } from './../pages/logout/logout';
+import { EvaluationPage } from './../pages/evaluation/evaluation';
 import { LecturerPage } from './../pages/lecturer/lecturer';
 import { Component, ViewChild } from '@angular/core';
-import { Nav, Platform } from 'ionic-angular';
+import { Nav, Platform, Events } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
@@ -17,17 +20,21 @@ export class MyApp {
 
   pages: Array<{title: string, component: any}>;
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
+  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen, public event : Events) {
     this.initializeApp();
 
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'หน้าเเรก', component: HomePage },
       { title: 'วิทยากร', component: LecturerPage }, 
+      { title: 'ประเมิน', component: EvaluationPage }, 
+      { title: 'การอบรม', component: TrainPage },
 
       // { title: 'ผู้เข้าอบรม', component: RegisParticipantsPage },
 
     ];
+
+  
 
   }
 

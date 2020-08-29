@@ -1,3 +1,6 @@
+
+import { TrainPage } from './../pages/train/train';
+import { EvaluationPage } from './../pages/evaluation/evaluation';
 import { LecturerPage } from './../pages/lecturer/lecturer';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
@@ -11,8 +14,9 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { ApiKeyProvider } from '../providers/api-key/api-key';
 import { ParticipantsPage } from '../pages/participants/participants';
+import { LoaddataProvider } from '../providers/loaddata/loaddata';
+import { TrainDetialPage } from '../pages/train-detial/train-detial';
 
 @NgModule({
   declarations: [
@@ -20,6 +24,10 @@ import { ParticipantsPage } from '../pages/participants/participants';
     HomePage,
     LecturerPage,
     ParticipantsPage,
+    EvaluationPage,
+    TrainPage,
+    TrainDetialPage,
+    
     
     
     
@@ -37,12 +45,16 @@ import { ParticipantsPage } from '../pages/participants/participants';
     HomePage,
     LecturerPage,
     ParticipantsPage,
+    EvaluationPage,
+    TrainPage,
+    TrainDetialPage,
+    
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    ApiKeyProvider
+    LoaddataProvider
   ]
 })
 export class AppModule {}

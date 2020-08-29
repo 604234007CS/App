@@ -10,19 +10,18 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>รายละเอียดการอบรม</ion-title>
+    <ion-title>ข้อมูลการอบรม</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-<p>ชื่ออบรม :</p>
-<p>สถานที่ :</p>
-<p>วันที่/เวลา</p>
-<p>เอกสารประกอบการอบรม</p>
+  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+
+<ion-item *ngFor="let item of data"  (click)="getdetail(item)" > 
+  <p>{{item.T_Name}}</p>
+</ion-item>
 
 
- <button ion-button secondary (click)="goName()" >รายชื่อผู้เข้าอบรม</button>
- <button ion-button secondary (click)="goRegister()" >ลงทะเบียน</button>
 </ion-content>

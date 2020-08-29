@@ -15,11 +15,27 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class LecturerPage {
 
+  logindata :any =[];
+  trianlecturer: any;
+  train: any;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad LecturerPage');
+    this.logindata = this.navParams.data;
+    console.log(this.logindata);
   }
+
+  // loaddata(){
+  //   this.train.getTrain().subscribe(train=>{
+  //     this.trianlecturer=train;
+  //     console.log(train);
+  //   });
+  // }
+
+  // dataSelected(data: string) {
+  //   console.log("Selected Item", data);
+  // }
 
 }

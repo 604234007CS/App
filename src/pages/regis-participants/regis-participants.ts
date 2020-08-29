@@ -20,7 +20,7 @@ export class RegisParticipantsPage {
   }
 
   Register1(){
-    let url = 'http://127.0.0.1/App/participants/insert_regis.php';
+    let url = 'http://127.0.0.1/AppService/participants/insert_regis.php';
 
     let postdataset = new FormData();
     postdataset.append('DirName', this.postdata.DirName);
